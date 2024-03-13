@@ -7,6 +7,6 @@ import (
 func main() {
 	terraform.Check()
 	terraform.Init()
-	terraform.Plan()
+	terraform.Plan("secret.tfvars")
 	terraform.Apply()
 }

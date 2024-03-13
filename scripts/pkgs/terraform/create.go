@@ -29,9 +29,9 @@ func Init() {
 	callBack(cmd)
 }
 
-func Plan() {
+func Plan(tfvarsfile string) {
 	fmt.Println("Generating terraform plan file")
-	cmd := exec.Command("terraform", "plan", "-out", "main.tfplan", "-var-file", "awssecret.tfvars")
+	cmd := exec.Command("terraform", "plan", "-out", "main.tfplan", "-var-file", tfvarsfile)
 	callBack(cmd)
 }
 
