@@ -7,6 +7,6 @@ import (
 
 func Destroy(tfvarsfile string) {
 	fmt.Println("Starting destruction of resources...")
-	cmd := exec.Command("terraform", "destroy", "-var-file", tfvarsfile)
+	cmd := exec.Command("terraform", "destroy", "-var-file", tfvarsfile, "--auto-approve")
 	callBack(cmd)
 }
